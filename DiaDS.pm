@@ -1,8 +1,9 @@
 #!/usr/bin/env perl
 
 ###################################################################################
-##           DIA DS1 Router information parsing through RED CLI 
+##           DIA DS1 Router information and parsing through RED CLI 
 ##           Author : Ravi Kondala
+##           Version: 1.0
 ###################################################################################
 ##           Version : 2.0
 ##           TCA Errors for Accedian/TELCO NIDS and ESP devices
