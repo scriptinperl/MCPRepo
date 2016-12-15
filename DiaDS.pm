@@ -76,9 +76,6 @@ sub diads1 {
     } elsif($device =~ /(edge|mar)/i) {
 	$cli = "red";
     } elsif($device =~ /(pr|hr)/i) {
-	## Blue device case
-	## http://svthdlv12/tacservices/diads1?device=pr1.bos1&interface=t1-2/0/0:1:2
-
 	$cli = "blue";
     }
 
@@ -125,10 +122,6 @@ sub diads1 {
 	    push @intf_errors, "terse Information not available for interface $interface";
 	} else {
 	   parse_terse($show_intf_terse->{result}->{response},$interface);
-	
-	   ## Leaving as it is at the moment as Space issues on parsing
-	   #@{$device_intf_info->{terse}} = 
-	   #    grep {!(/show interfaces|orancid|^$/) } @{$show_intf_terse->{result}->{response}};
 	}
     }
     
@@ -392,7 +385,6 @@ sub set_field {
 }
 
 ##### Hiper TCA Errors for RED Network Routines
-### http://svthdlv12/tacservices/tca_error_disp?device=ESP1.MIA1&interface=4/2/7
 sub tca_error_disp {
     
     my $request = shift;
